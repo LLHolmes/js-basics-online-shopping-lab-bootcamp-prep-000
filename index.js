@@ -30,7 +30,7 @@ function viewCart() {
   else {
     for (var i = 0; i < cart.length; i++) {
       if (i === (cart.length - 1)) {
-        list = (list + (` and ${cart[i].itemName} at $` + cart[i].itemPrice + "."));
+        return (list + (` and ${cart[i].itemName} at $` + cart[i].itemPrice + "."));
         return list;
       }
       else {
@@ -41,7 +41,11 @@ function viewCart() {
 }
 
 function total() {
-  // write your code here
+  cartTotal = 0;
+  for (var i = 0; i < cart.length; i++) {
+    cartTotal = cartTotal + cart[i].itemPrice;
+  }
+  return cartTotal;
 }
 
 function removeFromCart(item) {
