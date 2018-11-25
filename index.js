@@ -52,17 +52,19 @@ function removeFromCart(item) {
     if (cart[i].itemName === item) {
       return cart.splice(i, 2);
     }
-  return ("That item is not in your cart.");
+    else if (i === cart.length) {
+      return ("That item is not in your cart.");
+    }
   }
 }
 
 function placeOrder(cardNumber) {
-  var finalTotal = (total())
+  var finalTotal = total();
   if (cardNumber === undefined) {
     return ("Sorry, we don't have a credit card on file for you.");
   }
   else {
     cart.splice(0, cart.length);
-    return ("Your total cost is $" + finalTotal + `, which will be charged to the card ${cardNumber}.`)
+    return ("Your total cost is $" + finalTotal + `, which will be charged to the card ${cardNumber}.`);
   }
 }
