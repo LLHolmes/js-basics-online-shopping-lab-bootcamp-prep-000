@@ -31,7 +31,6 @@ function viewCart() {
     for (var i = 0; i < cart.length; i++) {
       if (i === (cart.length - 1)) {
         return (list + (` and ${cart[i].itemName} at $` + cart[i].itemPrice + "."));
-        return list;
       }
       else {
         list = (list + ` ${cart[i].itemName} at $` + cart[i].itemPrice + ",");
