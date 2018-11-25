@@ -48,7 +48,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var i = 0; i < cart.length; i==0) {
+  for (var i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
       return cart.splice(i, 2);
     }
@@ -63,6 +63,6 @@ function placeOrder(cardNumber) {
   }
   else {
     cart.splice(0, cart.length);
-    return ("Your total cost is $" + {finalTotal} + `, which will be charged to the card ${cardNumber}.`)
+    return ("Your total cost is $" + finalTotal + `, which will be charged to the card ${cardNumber}.`)
   }
 }
